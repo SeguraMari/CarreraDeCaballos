@@ -44,7 +44,7 @@ public class MainCarrera extends javax.swing.JFrame {
         bntStart = new javax.swing.JButton();
         lblCaballo1 = new javax.swing.JLabel();
         btnNew = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        lblMeta = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,8 +86,8 @@ public class MainCarrera extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vertical.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        lblMeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vertical.png"))); // NOI18N
+        lblMeta.setText("jLabel2");
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bandera.png"))); // NOI18N
 
@@ -103,7 +103,7 @@ public class MainCarrera extends javax.swing.JFrame {
                     .addGroup(JPanelLayout.createSequentialGroup()
                         .addComponent(lblCaballo1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(382, 382, 382)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblMeta, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pgb1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pgb2, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -152,7 +152,7 @@ public class MainCarrera extends javax.swing.JFrame {
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(JPanelLayout.createSequentialGroup()
                                 .addGap(14, 14, 14)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(lblMeta, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addContainerGap(82, Short.MAX_VALUE))
@@ -212,7 +212,7 @@ public class MainCarrera extends javax.swing.JFrame {
 
         terminado = 0;
         int inicio = 10;
-        int meta = jLabel2.getX() - lblCaballo1.getWidth();
+        int meta = lblMeta.getX() - lblCaballo1.getWidth();
 
         lblCaballo1.setText(nombre1);
         lblCaballo2.setText(nombre2);
@@ -286,6 +286,8 @@ public class MainCarrera extends javax.swing.JFrame {
             texto = texto + caballo2.getNombre() + ": " + caballo2.getTime() + " ms\n";
             texto = texto + caballo3.getNombre() + ": " + caballo3.getTime() + " ms\n";
 
+            JOptionPane.showMessageDialog(this, texto, "Resultado de la Carrera", JOptionPane.INFORMATION_MESSAGE);
+
         }
 
 
@@ -331,12 +333,12 @@ public class MainCarrera extends javax.swing.JFrame {
     private javax.swing.JButton bntStart;
     private javax.swing.JButton btnNew;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblCaballo1;
     private javax.swing.JLabel lblCaballo2;
     private javax.swing.JLabel lblCaballo3;
+    private javax.swing.JLabel lblMeta;
     private javax.swing.JProgressBar pgb1;
     private javax.swing.JProgressBar pgb2;
     private javax.swing.JProgressBar pgb3;

@@ -16,9 +16,7 @@ public class CaballosHilo extends Thread {
     private int pos;
     private int avance;
     private JLabel caballo;
-    private JLabel nomLabel;
-    private JProgressBar barra;
-
+    private JProgressBar barra; 
     private MainCarrera ventana;
     private long time;
 
@@ -39,7 +37,7 @@ public class CaballosHilo extends Thread {
         barra.setMaximum(meta - pos);
         barra.setValue(0);
         
-        
+                
 
         while (pos + avance < meta) {
 
@@ -52,7 +50,7 @@ public class CaballosHilo extends Thread {
             }
 
             caballo.setLocation(pos + avance, caballo.getY());
-            nomLabel.setLocation(pos + avance, nomLabel.getY());
+            barra.setValue(avance);
             
             try{
                 Thread.sleep(50);
