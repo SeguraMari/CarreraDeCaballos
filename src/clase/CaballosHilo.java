@@ -41,7 +41,7 @@ public class CaballosHilo extends Thread {
 
         while (pos + avance < meta) {
 
-            avance = avance + (int) (Math.random() * 10) + 1;
+            avance = avance + (int) (Math.random() * 5) + 1;
 
             if (pos + avance > meta) {
 
@@ -53,7 +53,7 @@ public class CaballosHilo extends Thread {
             barra.setValue(avance);
             
             try{
-                Thread.sleep(50);
+                Thread.sleep(150);
             }catch(InterruptedException e){
                 System.out.println("Interrupted");
             }

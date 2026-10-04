@@ -1,5 +1,6 @@
 package clase;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,6 +42,8 @@ public class MainCarrera extends javax.swing.JFrame {
         lblCaballo2 = new javax.swing.JLabel();
         lblCaballo3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtAResultados = new javax.swing.JTextArea();
         bntStart = new javax.swing.JButton();
         lblCaballo1 = new javax.swing.JLabel();
         btnNew = new javax.swing.JButton();
@@ -52,19 +55,33 @@ public class MainCarrera extends javax.swing.JFrame {
         JPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         lblCaballo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cab2.png"))); // NOI18N
+        lblCaballo2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblCaballo2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
         lblCaballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cab3.png"))); // NOI18N
-        lblCaballo3.setText("jLabel3");
+        lblCaballo3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblCaballo3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        txtAResultados.setEditable(false);
+        txtAResultados.setColumns(20);
+        txtAResultados.setRows(5);
+        jScrollPane1.setViewportView(txtAResultados);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 146, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 258, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         bntStart.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
@@ -76,7 +93,8 @@ public class MainCarrera extends javax.swing.JFrame {
         });
 
         lblCaballo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/caba1.png"))); // NOI18N
-        lblCaballo1.setText("jLabel4");
+        lblCaballo1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblCaballo1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
         btnNew.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
         btnNew.setText("New");
@@ -96,19 +114,30 @@ public class MainCarrera extends javax.swing.JFrame {
         JPanelLayout.setHorizontalGroup(
             JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
                 .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCaballo3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCaballo2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(JPanelLayout.createSequentialGroup()
-                        .addComponent(lblCaballo1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(382, 382, 382)
-                        .addComponent(lblMeta, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pgb1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pgb2, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pgb3, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addGap(17, 17, 17)
+                        .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCaballo2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(JPanelLayout.createSequentialGroup()
+                        .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPanelLayout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblCaballo1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(pgb3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblCaballo3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(pgb1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(pgb2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblMeta, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)))
                 .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPanelLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
@@ -125,22 +154,22 @@ public class MainCarrera extends javax.swing.JFrame {
         JPanelLayout.setVerticalGroup(
             JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
                 .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPanelLayout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(lblCaballo1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addComponent(lblCaballo1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pgb1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)
-                        .addComponent(lblCaballo2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblCaballo2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pgb2, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(lblCaballo3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblCaballo3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pgb3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JPanelLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
                         .addComponent(jLabel1)
                         .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JPanelLayout.createSequentialGroup()
@@ -153,7 +182,7 @@ public class MainCarrera extends javax.swing.JFrame {
                             .addGroup(JPanelLayout.createSequentialGroup()
                                 .addGap(14, 14, 14)
                                 .addComponent(lblMeta, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addContainerGap(82, Short.MAX_VALUE))
         );
@@ -172,7 +201,7 @@ public class MainCarrera extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(JPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -196,6 +225,12 @@ public class MainCarrera extends javax.swing.JFrame {
         lblCaballo1.setText("");
         lblCaballo2.setText("");
         lblCaballo3.setText("");
+
+        pgb1.setValue(0);
+        pgb2.setValue(0);
+        pgb3.setValue(0);
+
+        txtAResultados.setText("");
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void bntStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntStartActionPerformed
@@ -222,13 +257,6 @@ public class MainCarrera extends javax.swing.JFrame {
         lblCaballo2.setLocation(10, lblCaballo2.getY());
         lblCaballo3.setLocation(10, lblCaballo3.getY());
 
-        lblCaballo1.setHorizontalTextPosition(lblCaballo1.CENTER);
-        lblCaballo1.setVerticalTextPosition(lblCaballo1.TOP);
-        lblCaballo2.setHorizontalTextPosition(lblCaballo2.CENTER);
-        lblCaballo2.setVerticalTextPosition(lblCaballo2.TOP);
-        lblCaballo3.setHorizontalTextPosition(lblCaballo3.CENTER);
-        lblCaballo3.setVerticalTextPosition(lblCaballo3.TOP);
-
         lblCaballo1.setText(nombre1);
         lblCaballo2.setText(nombre2);
         lblCaballo3.setText(nombre3);
@@ -237,6 +265,7 @@ public class MainCarrera extends javax.swing.JFrame {
         lblCaballo2.setLocation(inicio, lblCaballo2.getY());
         lblCaballo3.setLocation(inicio, lblCaballo3.getY());
 
+        //CReacion de los Hilos
         caballo1 = new CaballosHilo(nombre1, lblCaballo1, pgb1, inicio, this, meta);
         caballo2 = new CaballosHilo(nombre2, lblCaballo2, pgb2, inicio, this, meta);
         caballo3 = new CaballosHilo(nombre3, lblCaballo3, pgb3, inicio, this, meta);
@@ -286,7 +315,11 @@ public class MainCarrera extends javax.swing.JFrame {
             texto = texto + caballo2.getNombre() + ": " + caballo2.getTime() + " ms\n";
             texto = texto + caballo3.getNombre() + ": " + caballo3.getTime() + " ms\n";
 
-            JOptionPane.showMessageDialog(this, texto, "Resultado de la Carrera", JOptionPane.INFORMATION_MESSAGE);
+            ImageIcon iconoTrofeo = new ImageIcon(getClass().getResource("/img/trofeo.png"));
+            JOptionPane.showOptionDialog(this,texto, "Resultado de la Carrera",JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, iconoTrofeo, new Object[]{"Aceptar"},"Aceptar");
+                  
+            
+            txtAResultados.setText(texto);
 
         }
 
@@ -335,6 +368,7 @@ public class MainCarrera extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCaballo1;
     private javax.swing.JLabel lblCaballo2;
     private javax.swing.JLabel lblCaballo3;
@@ -342,5 +376,6 @@ public class MainCarrera extends javax.swing.JFrame {
     private javax.swing.JProgressBar pgb1;
     private javax.swing.JProgressBar pgb2;
     private javax.swing.JProgressBar pgb3;
+    private javax.swing.JTextArea txtAResultados;
     // End of variables declaration//GEN-END:variables
 }
